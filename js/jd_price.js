@@ -9,8 +9,8 @@
 # 1. 修复比价接口
 # 2. 之前只能QX，Surge，更换为Env,兼容Loon等，仅测试QX
 
-[rewrite_local]
-^https?:\/\/in\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig) url script-response-body https://raw.githubusercontent.com/debiansid/qx/master/js/jd_price.js
+[rewrite_local] 
+http-request ^https:\/\/in\.m\.jd\.com\/product\/graphext\/\d+\.html script-path=https://raw.githubusercontent.com/mw418/Loon/main/script/jd_price.js, timeout=60
 [mitm]
 hostname = in.m.jd.com
 */
