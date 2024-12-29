@@ -10,9 +10,9 @@
 # 2. 之前只能QX，Surge，更换为Env,兼容Loon等，仅测试QX
 
 [rewrite_local]
-^https?:\/\/api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig) url script-response-body https://raw.githubusercontent.com/wf021325/qx/master/js/jd_price.js
+^https?:\/\/in\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig) url script-response-body https://raw.githubusercontent.com/wf021325/qx/master/js/jd_price.js
 [mitm]
-hostname = api.m.jd.com
+hostname = in.m.jd.com
 */
 
 const path1 = "serverConfig";
